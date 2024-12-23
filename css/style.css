@@ -1,0 +1,128 @@
+/* Variables CSS */
+:root {
+    --background-color: #f9f9f9;
+    --primary-color: #007BFF;
+    --primary-hover: #0056b3;
+    --text-color: #333;
+    --header-color: #ffffff;
+    --footer-background: #f4f4f4;
+    --footer-text-color: #555;
+}
+
+/* General */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    background-color: var(--primary-color); /* Primary color */
+    color: var(--header-color); /* White text */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Navigation bar */
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--header-color); /* White text */
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav a:hover {
+    color: #FFD700; /* Gold on hover */
+}
+
+/* User info styling */
+.user-info {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #FFD700; /* Gold text for user info */
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px auto;
+}
+
+
+/* Responsive design for header */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+}
+/* Footer styling */
+footer {
+    background-color: var(--footer-background);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    color: var(--footer-text-color);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: var(--primary-hover);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
